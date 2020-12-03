@@ -1,14 +1,14 @@
 var canvas, ctx, gameControl, gameActive;
 // render times per second
-var x = 9;
-var y = 8;
-var z = 20;
+var x = 12;
+var y = 9;
+var z = 25;
 var c = 60;
       
 const CANVAS_BORDER_COLOUR = 'black';
 const CANVAS_BACKGROUND_COLOUR = 'black';
-const SNAKE_COLOUR = 'darkblue';
-const SNAKE_BORDER_COLOUR = 'blue';
+const SNAKE_COLOUR = 'aqua';
+const SNAKE_BORDER_COLOUR = 'black';
 
 var gameControlFood;
 var gameControlShoot;
@@ -146,8 +146,9 @@ function draw() {
     ctx.fillRect(appleX * tileSize, appleY * tileSize, tileSize, tileSize);
 
     // paint shot
+    
     ctx.fillStyle = "blue";
-    ctx.strokestyle = "blue";
+    ctx.strokestyle = "black";
     ctx.fillRect(shotX * tileSize, shotY * tileSize, tileSize, tileSize);
     ctx.strokeRect(shotX * tileSize, shotY * tileSize, tileSize, tileSize);
 
@@ -216,8 +217,6 @@ function checkHitApple(){
             document.getElementById("game-score").innerHTML = "<h3>Score: " + score + "</h3>";
         }
         if(tailSize < 3){
-            appleX = Math.floor(Math.random() * gridSize);
-            appleY = Math.floor(Math.random() * gridSize);
             endGame(tailSize);
             tailSize = defaultTailSize; 
             score = 0;
