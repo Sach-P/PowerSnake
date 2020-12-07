@@ -11,90 +11,81 @@ var canvas, ctx, gameActive, gameControl;
     document.getElementById("top-side2").innerHTML = "SNAKE";
     document.getElementById("top-side1").style.color = "lime";
     document.getElementById("top-side2").style.color = "lime";
-    document.getElementById("top-side1").style.paddingLeft = "13.2vh";
+    document.getElementById("top-side1").style.paddingLeft = "12.6vh";
     document.getElementById("top-side2").style.paddingRight = "13.25vh";
-    document.getElementById("shoot-button1").style.display = "none";
-    document.getElementById("shoot-button2").style.display = "none";
-    document.getElementById("shoot-text1").style.display = "none";
-    document.getElementById("shoot-text2").style.display = "none";
+    document.getElementById("shoot-button").style.display = "none";
+    document.getElementById("shoot-text").style.display = "none";
 
     document.getElementById("Predator").onclick = function(){
         if(!predator){
-        endGame(tailSize);
-        score = 0;
-        tailSize = defaultTailSize;
-        gameControl = startGame(x);
-        predator = true;
-        prey = false;
-        classic = false;
-        document.getElementById("Predator").style.color = "purple";
-        document.getElementById("Classic").style.color = "white";
-        document.getElementById("Prey").style.color = "white";
-        document.getElementById("top-side1").innerHTML = "CATCH";
-        document.getElementById("top-side2").innerHTML = "THE 'APPLE'";
-        document.getElementById("top-side1").style.color = "purple";
-        document.getElementById("top-side2").style.color = "purple";
-        document.getElementById("top-side1").style.paddingLeft = "14.25vh";
-        document.getElementById("top-side2").style.paddingRight = "8vh";
-        document.getElementById("shoot-button1").style.display = "none";
-        document.getElementById("shoot-button2").style.display = "none";
-        document.getElementById("shoot-text1").style.display = "none";
-        document.getElementById("shoot-text2").style.display = "none";
-
+            endGame(tailSize);
+            score = 0;
+            tailSize = defaultTailSize;
+            gameControl = startGame(x);
+            predator = true;
+            prey = false;
+            classic = false;
+            document.getElementById("Predator").style.color = "purple";
+            document.getElementById("Classic").style.color = "white";
+            document.getElementById("Prey").style.color = "white";
+            document.getElementById("top-side1").innerHTML = "CATCH";
+            document.getElementById("top-side2").innerHTML = "THE 'APPLE'";
+            document.getElementById("top-side1").style.color = "purple";
+            document.getElementById("top-side2").style.color = "purple";
+            document.getElementById("top-side1").style.paddingLeft = "14.25vh";
+            document.getElementById("top-side2").style.paddingRight = "8vh";
+            document.getElementById("shoot-button").style.display = "none";
+            document.getElementById("shoot-text").style.display = "none";
         }
     };
 
     
     document.getElementById("Prey").onclick = function(){
         if(!prey){
-        endGame(tailSize);
-        score = 0;
-        tailSize = defaultTailSize;
-        gameControl = startGame(x);
-        prey = true;
-        predator = false;
-        classic = false;
-        document.getElementById("Prey").style.color = "red";
-        document.getElementById("Predator").style.color = "white";
-        document.getElementById("Classic").style.color = "white";
-        document.getElementById("top-side1").innerHTML = "DON'T TOUCH";
-        document.getElementById("top-side2").innerHTML = "THE 'APPLE'";
-        document.getElementById("top-side1").style.color = "red";
-        document.getElementById("top-side2").style.color = "red";
-        document.getElementById("top-side1").style.paddingLeft = "7.5vh";
-        document.getElementById("top-side2").style.paddingRight = "8vh";
-        document.getElementById("shoot-button1").style.display = "";
-        document.getElementById("shoot-button2").style.display = "";
-        document.getElementById("shoot-text1").style.display = "";
-        document.getElementById("shoot-text2").style.display = "";
-    
+            endGame(tailSize);
+            score = 0;
+            tailSize = defaultTailSize;
+            gameControl = startGame(x);
+            prey = true;
+            predator = false;
+            classic = false;
+            document.getElementById("Prey").style.color = "red";
+            document.getElementById("Predator").style.color = "white";
+            document.getElementById("Classic").style.color = "white";
+            document.getElementById("top-side1").innerHTML = "DON'T TOUCH";
+            document.getElementById("top-side2").innerHTML = "THE 'APPLE'";
+            document.getElementById("top-side1").style.color = "red";
+            document.getElementById("top-side2").style.color = "red";
+            document.getElementById("top-side1").style.paddingLeft = "7.5vh";
+            document.getElementById("top-side2").style.paddingRight = "8vh";
+            document.getElementById("shoot-button").style.display = "";
+            document.getElementById("shoot-text").style.display = "";
         }
     };
 
     document.getElementById("Classic").onclick = function(){
         if(!classic){
-        endGame(tailSize);
-        score = 0;
-        tailSize = defaultTailSize;
-        gameControl = startGame(x);
-        classic = true;
-        predator = false;
-        prey = false;
-        document.getElementById("Classic").style.color = "lime";
-        document.getElementById("Predator").style.color = "white";
-        document.getElementById("Prey").style.color = "white";
-        document.getElementById("top-side1").innerHTML = "CLASSIC";
-        document.getElementById("top-side2").innerHTML = "SNAKE";
-        document.getElementById("top-side1").style.color = "lime";
-        document.getElementById("top-side2").style.color = "lime";
-        document.getElementById("top-side1").style.paddingLeft = "13.2vh";
-        document.getElementById("top-side2").style.paddingRight = "13.25vh";
-        document.getElementById("shoot-button1").style.display = "none";
-        document.getElementById("shoot-button2").style.display = "none";
-        document.getElementById("shoot-text1").style.display = "none";
-        document.getElementById("shoot-text2").style.display = "none";
+            endGame(tailSize);
+            score = 0;
+            tailSize = defaultTailSize;
+            gameControl = startGame(x);
+            classic = true;
+            predator = false;
+            prey = false;
+            document.getElementById("Classic").style.color = "lime";
+            document.getElementById("Predator").style.color = "white";
+            document.getElementById("Prey").style.color = "white";
+            document.getElementById("top-side1").innerHTML = "CLASSIC";
+            document.getElementById("top-side2").innerHTML = "SNAKE";
+            document.getElementById("top-side1").style.color = "lime";
+            document.getElementById("top-side2").style.color = "lime";
+            document.getElementById("top-side1").style.paddingLeft = "12.6vh";
+            document.getElementById("top-side2").style.paddingRight = "13.25vh";
+            document.getElementById("shoot-button").style.display = "none";
+            document.getElementById("shoot-text").style.display = "none";
         }
     };
+    
         
     const CANVAS_BORDER_COLOUR = 'black';
     const CANVAS_BACKGROUND_COLOUR = 'black';
@@ -199,7 +190,7 @@ var canvas, ctx, gameActive, gameControl;
                 tileSize
             );
             
-            ctx.strokeRect(snakeTrail[i].x * tileSize , snakeTrail[i].y* tileSize, tileSize, tileSize);
+            ctx.strokeRect(snakeTrail[i].x * tileSize , snakeTrail[i].y * tileSize, tileSize, tileSize);
 
             //snake bites it's tail?
             if (snakeTrail[i].x == snakeX && snakeTrail[i].y == snakeY) {
